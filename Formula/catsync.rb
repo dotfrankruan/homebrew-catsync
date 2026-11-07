@@ -6,7 +6,6 @@
 class Catsync < Formula
   desc "Parallel, resumable file tree copier over SSH"
   homepage "https://github.com/dotfrankruan/CatSync"
-  version "0.1.0"
   license "AGPL-3.0-only"
 
   on_macos do
@@ -37,6 +36,7 @@ class Catsync < Formula
   end
 
   test do
-    assert_match "catsync 0.1.0", shell_output("#{bin}/catsync version")
+    assert_match "catsync v0.1.0", shell_output("#{bin}/catsync version")
+    assert_match "Usage: catsync", shell_output("#{bin}/catsync help")
   end
 end
