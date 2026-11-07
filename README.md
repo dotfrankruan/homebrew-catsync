@@ -23,11 +23,26 @@ brew tap dotfrankruan/catsync
 brew install catsync
 ```
 
+Recent Homebrew versions ask you to trust third-party taps before loading a
+formula from one. If you see `Refusing to load formula ... from untrusted tap`,
+approve it once:
+
+```sh
+brew trust dotfrankruan/catsync
+```
+
 ## Upgrade
 
 ```sh
 brew upgrade catsync
 ```
+
+## What the formula installs
+
+The prebuilt archive published for the current CatSync release: the same binary
+the project's release workflow builds for `linux/amd64`, `linux/arm64`,
+`darwin/amd64`, and `darwin/arm64`, with the release's `SHA-256` pinned in the
+formula.
 
 ## Requirements
 
