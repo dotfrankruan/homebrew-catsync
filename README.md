@@ -23,13 +23,19 @@ brew tap dotfrankruan/catsync
 brew install catsync
 ```
 
-Recent Homebrew versions ask you to trust third-party taps before loading a
-formula from one. If you see `Refusing to load formula ... from untrusted tap`,
-approve it once:
+The fully-qualified command above auto-taps this repository and needs no trust
+step. If you tap first and install by short name, recent Homebrew versions ask
+you to trust the third-party tap before loading a formula from it:
 
 ```sh
-brew trust dotfrankruan/catsync
+brew tap dotfrankruan/catsync
+brew trust dotfrankruan/catsync   # trusts this tap (all formulae in it)
+brew install catsync
 ```
+
+`dotfrankruan/catsync` is the tap name; Homebrew maps it to this repository
+(`homebrew-catsync`). `brew trust --formula dotfrankruan/catsync/catsync`
+trusts only the catsync formula instead of the whole tap.
 
 ## Upgrade
 
